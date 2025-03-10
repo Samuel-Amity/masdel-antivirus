@@ -122,6 +122,15 @@ Develop an antivirus system with two main components:
 - Documented high-level architecture diagram:
   [Local System] -> [Rust Scanner] -> [Python AI Model] -> [Django API (Cloud)] -> [Web Dashboard]
 
+## Week 1: Completed Tasks  
+
+- ✅ Set up and activated Python virtual environment (`venv`).  
+- ✅ Installed required Python libraries (`numpy`, `pandas`, `tensorflow`, `django`, etc.).  
+- ✅ Installed Rust and verified setup (`rustc`, `cargo`).  
+- ✅ Set up PostgreSQL, created `antivirus_db`, and connected it to Django.  
+- ✅ Created and ran a simple Rust program (`hello.rs`).  
+- ✅ Implemented basic logging (`debug_logger.py`) and verified `antivirus.log`.  
+
 ---
 
 ## Week 2: Develop Local Antivirus File Scanner in Rust
