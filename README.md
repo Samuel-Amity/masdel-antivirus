@@ -65,12 +65,62 @@ Develop an antivirus system with two main components:
   - **IDE/Editors:**  
     - Visual Studio Code, IntelliJ IDEA (with Rust plugin), or PyCharm.
 
+### Security Measures
+
+- **Rust & Python Security:**
+  - Use **Clippy & RustSec** to catch vulnerabilities in Rust.
+  - Use **Bandit** for Python static code analysis.
+
+- **Django API Security:**
+  - Implement **JWT or OAuth2** authentication.
+  - Enforce **rate limiting** with Django REST Framework.
+  - Enable **HTTPS** in production.
+
+- **AWS Security:**
+  - Secure PostgreSQL with **IAM roles & VPC**.
+  - Use **AWS WAF & Shield** for DDoS protection.
+  - Store secrets in **AWS Secrets Manager** instead of `.env` files.
+
+### Expected Features
+
+- **Real-time Threat Detection:**
+  - Web dashboard updates dynamically with scan logs.
+  - Optional **email alerts** for high-risk detections.
+
+- **Multi-threaded File Scanning:**
+  - Rust scanner optimized with **Rayon** for performance.
+
+- **Cloud-Based Scan Logs & Reports:**
+  - Store past scans in **PostgreSQL** with **CSV/JSON export** options.
+
+- **User Roles & Permissions:**
+  - Implement **Admin vs. Standard User** access control.
+
+- **REST API for Remote Scanning:**
+  - Enable external clients to submit files for scanning via API.
+
+### Debugging & Logging Strategy
+
+- **Rust Logging (File Scanner & Network Monitoring)**
+  - Uses `log` and `env_logger` crates.
+  - Can be enabled/disabled via environment variables.
+
+- **Python AI Module Logging**
+  - Uses built-in `logging` module with log levels (`INFO`, `WARNING`, `ERROR`).
+  - Easily toggle logging via config.
+
+- **Django API Logging**
+  - Uses Django's built-in logging system.
+  - Logs can be stored locally or in AWS CloudWatch.
+
+- **Optional Sentry Integration**
+  - Can capture and report errors across Rust, Python, and Django.
+  - Completely removable if not needed.
+
 ### Milestones:
 - Environment installation completed.
 - Documented high-level architecture diagram:
-[Local System] -> [Rust Scanner] -> [Python AI Model] -> [Django API (Cloud)] -> [Web Dashboard]
-
-
+  [Local System] -> [Rust Scanner] -> [Python AI Model] -> [Django API (Cloud)] -> [Web Dashboard]
 
 ---
 
